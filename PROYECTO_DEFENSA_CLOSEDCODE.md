@@ -230,12 +230,4 @@ Para mantener una sincronía perfecta durante la defensa, cada expositor conclui
 
 ---
 
-## 6. CRONOGRAMA DE PREPARACIÓN (13 Y 14 DE OCTUBRE)
 
-| Fecha / Hora | Actividad | Meta Concreta |
-| :--- | :--- | :--- |
-| **13-Oct (12:00)** | Consolidación de Diapositivas | Documento de presentación unificado con el texto exacto por lámina. |
-| **13-Oct (18:00)** | Integración de Diagramas Draw.io | Exportación de los 5 diagramas en alta calidad e inserción en las diapositivas. |
-| **13-Oct (21:30)** | Ensayo General de Tiempos | Cronometrar la exposición completa (meta: 20-22 minutos en total, 4-5 min por persona). |
-| **14-Oct (Mañana)** | Generación de Copias de Respaldo | Guardar presentación en formato nativo, exportar en PDF y cargar en pendrive de contingencia. |
-| **14-Oct (Clase)** | Defensa Presencial | Ejecución coordinada de la presentación ante el tribunal/docente. |
