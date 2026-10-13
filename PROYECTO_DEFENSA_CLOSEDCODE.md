@@ -198,36 +198,5 @@ Cada módulo debe contar con su lámina principal apoyada en un diagrama formal 
     * 3.4.2 La firma digital (Certificados digitales, no repudio y sellado de tiempo)
     * 3.4.3 La esteganografía (Fundamentos, riesgo de exfiltración encubierta y detección)
 
-#### Guion y Defensa en Vivo:
-* **Cifrado en Tránsito y Reposo (3.4.1):**
-  * *"La información debe ser ilegible para cualquier tercero no autorizado, tanto cuando viaja por un cable como cuando está guardada en un disco."*
-  * *En tránsito:* Uso exclusivo de TLS 1.3 con certificados X.509 válidos. Se bloquean explícitamente protocolos obsoletos (SSLv3, TLS 1.0, 1.1) y métodos en texto plano (HTTP, Telnet, FTP).
-  * *En reposo:* Cifrado de disco completo con BitLocker / LUKS en laptops portátiles utilizando chip de seguridad TPM 2.0 (si se extravía la laptop, los datos son inaccesibles). Cifrado de copias de seguridad con algoritmo AES-256 antes de salir al almacenamiento secundario.
-* **Firma Digital y No Repudio (3.4.2):**
-  * Mecanismo: Se genera el hash SHA-256 del documento y se cifra con la clave privada del emisor. El receptor valida la autenticidad e integridad utilizando la clave pública contenida en el certificado digital.
-  * Aplicación real en AIC S.A.: Autorización digital de órdenes de despacho y firmas de manifiestos de carga, garantizando que el documento no fue alterado en tránsito y que el autor no pueda repudiar su emisión.
-* **Esteganografía: La Amenaza Invisible (3.4.3):**
-  * Explicación técnica: Ocultamiento de información confidencial dentro de archivos portadores aparentemente normales (imágenes PNG/JPEG, audios o videos) sin alterar perceptiblemente su aspecto mediante la técnica de Modificación del Bit Menos Significativo (LSB - *Least Significant Bit*).
-  * Caso de ataque / Exfiltración: Un empleado desleal extrae un archivo CSV con precios confidenciales y lista de proveedores, lo inyecta dentro de la fotografía institucional del logotipo corporativo y lo envía por correo electrónico personal burlando filtros de palabras clave.
-  * Contramedidas de defensa: Sistemas DLP (Data Loss Prevention) y pasarelas de seguridad que eliminan metadatos, recalculan compresión de imágenes en el proxy perimetral y analizan anomalías de entropía estadística en los archivos exportados.
-
----
-
-## 5. GUION DE TRANSICIONES ENTRE EXPOSITORES
-
-Para mantener una sincronía perfecta durante la defensa, cada expositor concluirá dando paso formal a su compañero:
-
-1. **Luis $\to$ Jhoel:**  
-   *"Habiendo establecido la arquitectura de hardware y los servicios que sustentan la operación de nuestra organización, cedo la palabra a Jhoel Cruz, quien detallará cómo protegemos físicamente estas instalaciones y los recursos de campo."*
-2. **Jhoel $\to$ Freddy:**  
-   *"Con el Data Center resguardado y los controles de acceso físico en marcha, el siguiente frente crítico es la red lógica. Freddy Ponce explicará la arquitectura de segmentación, DMZ y firewalls perimetrales."*
-3. **Freddy $\to$ Eliazar:**  
-   *"Una vez blindado el perímetro y canalizado el tráfico, el foco pasa a quienes operan dentro del sistema. Eliazar Campos abordará la gestión de identidad, control de acceso RBAC y la preservación de la tríada de seguridad."*
-4. **Eliazar $\to$ Carlos:**  
-   *"Incluso con usuarios autenticados, el contenido de la información debe ser inviolable. Carlos Soruco cerrará nuestra exposición explicando los mecanismos de cifrado, la validez de la firma digital y los vectores de ataque por esteganografía."*
-5. **Cierre de Carlos:**  
-   *"Con esto concluimos la presentación de la arquitectura de seguridad integral de AIC S.A. Quedamos a disposición del docente para la ronda de preguntas."*
-
----
 
 
